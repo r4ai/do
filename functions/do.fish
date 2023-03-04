@@ -7,7 +7,7 @@ function do
 
     # * Get list of script file paths in scripts directory
     set -l scripts
-    if [ -d "$root/scripts" ]
+    if [ -d $root/scripts ]
         for script in (find $root/scripts -type f -name "*.sh")
             set script (basename -s ".sh" "$script")
             set scripts $scripts $script
@@ -17,7 +17,7 @@ function do
     end
 
     # * Run script if it exists
-    if [ -d ./scripts ]
+    if [ -d $root/scripts ]
         if [ -f "$root/scripts/$argv[1].sh" ]
             sh "$root/scripts/$argv[1].sh"
         else
