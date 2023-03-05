@@ -53,11 +53,11 @@ function run_tests
     assert $expected $actual
 
     # * test project_with_scripts
-    set expected "Available scripts: hello build test"
+    set expected "Available scripts: build hello test"
     set actual (cd $root/test/project_with_scripts && do)
     assert $expected $actual
 
-    set expected "Available scripts: hello build test"
+    set expected "Available scripts: build hello test"
     set actual (cd $root/test/project_with_scripts && do hoge)
     assert $expected $actual
 

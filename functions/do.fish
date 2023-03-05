@@ -48,6 +48,7 @@ function do
                 set script (basename -s ".sh" "$script")
                 set scripts $scripts $script
             end
+            set scripts (echo $scripts | tr " " "\n" | sort)
         else
             set scripts ""
         end
