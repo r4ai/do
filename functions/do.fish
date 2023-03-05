@@ -5,6 +5,14 @@ function do
     set -l cwd (pwd)
     set -l root (git rev-parse --show-toplevel 2>/dev/null)
 
+    if [ "$root" = "" ]
+        echo "Not in a git repository."
+        echo "You need to be in a git repository to use this script."
+        echo ""
+        echo "Usage: do <script>"
+        return 1
+    end
+
     # * Get list of script file paths in scripts directory
     set -l scripts
     if [ -d $root/scripts ]
