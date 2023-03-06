@@ -56,7 +56,7 @@ function do
         # * Run script if it exists
         if [ -d $root/scripts ]
             if [ -f "$root/scripts/$argv[1].sh" ]
-                sh "$root/scripts/$argv[1].sh"
+                eval "$root/scripts/$argv[1].sh"
             else
                 echo "Available scripts: $scripts"
             end
