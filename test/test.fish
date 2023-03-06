@@ -22,6 +22,8 @@ function del_projects_for_tests
 end
 
 function gen_projects_for_tests
+    echo ""
+    echo "=== START GENERATING PROJEFCTS FOR TESTS ==="
     cd $root/test
     del_projects_for_tests
 
@@ -41,6 +43,8 @@ function gen_projects_for_tests
     #* project_without_scripts
     mkdir project_without_scripts
     cd project_without_scripts && git init && cd ..
+
+    echo "===  END GENERATING PROJEFCTS FOR TESTS  ==="
 end
 
 function run_tests
@@ -81,8 +85,7 @@ function run_tests
     # * reset to original directory
     cd $cwd
 
-    echo "=== END TESTS ==="
-    echo ""
+    echo "===  END TESTS  ==="
 end
 
 gen_projects_for_tests
@@ -91,9 +94,11 @@ del_projects_for_tests
 cd $cwd
 
 if $is_failure
+    echo ""
     echo "Some tests failed!"
     exit 1
 else
+    echo ""
     echo "All tests passed!"
     exit 0
 end

@@ -3,11 +3,11 @@
 ## Usage
 
 ```bash
-$ do [script]
+$ do [script-file-name]
 ```
 
 `do` finds the script files with `sh` extension in `scripts` directory and run it.  
-The `[script]` is the name of the script file without the extension.
+The `[script-file-name]` is the name of the shell script file without the extension.
 
 For example, if you're in the project like this:
 
@@ -47,4 +47,27 @@ You can install `do` using [fisher](https://github.com/jorgebucaran/fisher).
 
 ```bash
 fisher install r4ai/do
+```
+
+## Development
+
+### How to install from local file
+
+```bash
+$ git clone https://github.com/r4ai/do
+$ cd do
+$ fisher install .
+```
+
+### How to run tests
+
+```bash
+# This command is the same as `sh ./scripts/test.sh`.
+$ do test
+```
+
+using [act](https://github.com/nektos/act), you can run GitHub Actions for testing locally.
+
+```bash
+$ act
 ```
