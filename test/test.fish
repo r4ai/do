@@ -44,6 +44,8 @@ function gen_projects_for_tests
     mkdir project_without_scripts
     cd project_without_scripts && git init && cd ..
 
+    #* add permissions
+    chmod +x $root/test/**/*.sh
     echo "===  END GENERATING PROJEFCTS FOR TESTS  ==="
 end
 
