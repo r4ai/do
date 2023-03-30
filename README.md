@@ -1,5 +1,8 @@
 # Simple command to run scripts
 
+- Run `*.sh` files in scripts dir.
+- Tab completion for `*.sh` file names.
+
 ## Usage
 
 ```bash
@@ -8,6 +11,8 @@ $ do [script-file-name]
 
 `do` finds the script files with `sh` extension in `scripts` directory and run it.  
 The `[script-file-name]` is the name of the shell script file without the extension.
+
+### Tutorial
 
 For example, if you're in the project like this:
 
